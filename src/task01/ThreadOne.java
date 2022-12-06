@@ -4,7 +4,7 @@ public class ThreadOne implements Runnable {
     public static long time = 0;
     public static volatile long timesLeft = 0;
     @Override
-    public void run() {
+    public synchronized void run() {
         time = Timer.getMillis();
         while (true) {
             try {
@@ -14,6 +14,14 @@ public class ThreadOne implements Runnable {
             }
             timesLeft = Math.abs(time - Timer.getMillis()) / 1000;
             System.out.println(timesLeft);
+            if(timesLeft %5 == 0){
+                try {
+                    wait();
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+                notify();
+            }
         }
     }
 }
