@@ -25,8 +25,8 @@ public class Printer {
     public static String resultPrint() {
         String temp = "";
         for (String s : result) {
-            System.out.print(s + ", ");
+            temp += s + ", ";
         }
-        return temp;
+        return temp.substring(0, temp.length() - 2);
     }
 }
