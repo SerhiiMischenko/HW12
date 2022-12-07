@@ -14,14 +14,6 @@ public class ThreadOne implements Runnable {
             }
             timesLeft = Math.abs(time - Timer.getMillis()) / 1000;
             System.out.println(timesLeft);
-            if(timesLeft %5 == 0){
-                try {
-                    wait();
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
-                }
-                notify();
-            }
         }
     }
 }
