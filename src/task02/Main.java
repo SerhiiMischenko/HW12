@@ -21,9 +21,6 @@ public class Main {
         threadFizzBuzz.join();
 
 
-
-
-
-        System.out.println(Printer.result);
+        System.out.println(Printer.resultPrint());
     }
 }

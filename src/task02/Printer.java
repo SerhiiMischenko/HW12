@@ -21,4 +21,12 @@ public class Printer {
         }
         return result;
     }
+
+    public static String resultPrint() {
+        String temp = "";
+        for (String s : result) {
+            System.out.print(s + ", ");
+        }
+        return temp;
+    }
 }
