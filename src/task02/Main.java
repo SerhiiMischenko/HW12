@@ -1,7 +1,5 @@
 package task02;
 
-import task01.ThreadOne;
-
 public class Main {
     public static void main(String[] args) throws InterruptedException {
         Thread threadNumber = new Thread(new ThreadNumber());
