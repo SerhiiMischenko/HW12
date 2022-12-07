@@ -13,7 +13,7 @@ public class ThreadOne implements Runnable {
                 throw new RuntimeException(e);
             }
             timesLeft = Math.abs(time - Timer.getMillis()) / 1000;
-            System.out.println(timesLeft);
+            System.out.println(timesLeft + " second remain.");
         }
     }
 }
